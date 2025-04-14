@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Fayyadh</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #f4b400;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+    .sidebar img {
+  width: 100px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 30%; 
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+
+
+    .nav-links {
+      list-style: none;
+      width: 100%;
+    }
+
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1em;
+      display: block;
+      padding: 10px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+    background-color: transparent;
+    color: white;
+    }
+
+    
+
+    .main-content {
+      margin-left: 200px;
+      padding: 60px;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+
+    .stats-container {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      background: black;
+      color: #f4b400;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+    }
+
+    .stat-box h2 {
+      font-size: 2em;
+    }
+
+    .stat-box p {
+      color: white;
+      margin-top: 10px;
+      font-size: 1em;
+    }
+
+    .services {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .service p {
+      color: #555;
+    }
+
+    .title {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      color: #f4b400;
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    h2 {
+      font-size: 1em;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #722d2d;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    h3 {
+      font-size: 1em;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #6b3d3d;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .name {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .highlight {
+      color: #f4b400;
+    }
+
+    .contact p, .education p, .experience p {
+      margin: 6px 0;
+      font-size: 0.95em;
+    }
+
+    .experience p strong {
+      display: block;
+      margin-top: 15px;
+    }
+
+    .skills-section, .interest-section {
+      margin-top: 50px;
+    }
+
+    .skills, .interests {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill, .interest {
+      background-color: #f4b400;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 1em;
+    }
+    .skill {
+  background-color: #f4b400;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer; /* Membuat elemen terlihat bisa diklik */
+  transition: all 0.3s ease;
+}
+
+/* Efek saat di-hover */
+.skill:hover {
+  background-color: #f1a800; /* Mengubah warna saat hover */
+  transform: scale(1.1); /* Membuat elemen sedikit membesar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+}
+
+/* Efek saat diaktifkan atau dipilih */
+.skill.active {
+  background-color: #e38f00; /* Warna saat dipilih */
+  transform: scale(1.1); /* Membesar saat aktif */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Menambah bayangan lebih kuat */
+  border: 2px solid #f4b400; /* Memberikan border untuk menunjukkan bahwa elemen dipilih */
+}
+
+   
+  .social-icons {
+  margin-top: 50px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0); /* saat hover jadi warna asli */
+}
+
+  </style>
+  
+</head>
+<body>
+  <div class="sidebar">
+    <img src="UNLK0690.jpg" alt="Profile Picture" />
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html" class="active">ABOUT ME</a></li>
+      <li><a href="#">RESUME</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><a href="#">CONTACT</a></li>
+    
+    <div class="social-icons">
+      <a href="https://www.instagram.com/radhwa___/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://wa.me/6281267704484" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      <a href="https://linkedin.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+    </div>
+  </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="cv-section">
+      <h2 style="font-size: 2em; color: black; margin-bottom: 10px;">Introduction <span style="color: #f4b400;">about me</span></h2>
+      <p class="intro-text">
+        I'm <strong>Fayyadh</strong>,<br>
+        <span>
+        As a student of Information Systems, Faculty of Computer Science, Brawijaya University, he has an interest in the development of information technology, data analysis, and the implementation of systems that can support efficiency and effectiveness in various industrial fields. This interest encourages him to continue learning and honing his skills in programming, IT project management, and understanding business needs in order to integrate technology with practical solutions that are beneficial to society and the industrial world.</span>
+      </p>
+
+      <div class="cv-container" style="display: flex; flex-wrap: wrap; gap: 60px;">
+        <div class="cv-left" style="flex: 1; min-width: 280px;">
+          <h3 style="margin-bottom: 10px;">PROFILE & CONTACT</h3> <br>
+          <p style="font-size: 1.2em;"><span style="color: #f4b400; font-weight: bold;">Fayyadh</span> Radhwa Ferdia</p><br>
+          <p>📍 Malang, Indonesia</p><br>
+          <p>📞 +62 812-6770-4484</p><br>
+          <p>✉️ Fayyadhradhwa0106@gmail.com</p>
+
+          <h3 style="margin-top: 30px;">EDUCATION</h3><br>
+          <p>SMA N 1 Padang  ( 2020 - 2023 )</p><br>
+          <p>S1 Sistem Informasi - Universitas Brawijaya  <br><br> ( 2023 - sekarang )</p>
+        </div>
+
+        <div class="cv-right" style="flex: 2; min-width: 300px;">
+          <h3 style="margin-bottom: 10px;">ORGANIZATION EXPERIENCE</h3>
+          <p><strong>Staff Of Human Resource Department </strong><br>
+          UKM Mahasiswa Wirausaha ( 1 February 2024 – 8 December 2024)</p><br>
+          <p><strong>Koordinator  Desain, Dokumentasi, dan Multimedia. </strong><br>
+          Mahasiswa Wirausaha (12 May 2024 – 1 June 2024)</p><br>
+          <p><strong>WaKoordinator Logistic</strong><br>
+          OPREC Mahasiswa Wirausaha (1 July – 23 November 2024)</p><br>
+          <p><strong> Manager Of Human Resource Department</strong><br>
+          Mahasiswa Wirausaha ( 1 February 2025 – 8 December 2025)</p>
+        </div>
+      </div>
+
+      <div class="interest-section">
+        <h2>INTEREST</h2><br>
+      <div class="services">
+        <div class="service">
+          <h4>🖨️ UI/UX Designer</h4>
+          <p>Designing apps, website, other.</p>
+        </div>
+        <div class="service">
+          <h4>💻 Website Development</h4>
+          <p>Creating clean, responsive websites optimized for performance and UX.</p>
+        </div>
+        <div class="service">
+          <h4>📷 Photography</h4>
+          <p>Capturing moments and editing photos with a professional touch.</p>
+        </div>
+      </div>
+
+      <div class="skills-section">
+        <h2>SOFTWARE SKILLS</h2>
+        <div class="skills">
+          <div class="skill">Figma</div>
+          <div class="skill">Canva</div>
+          <div class="skill">Java</div>
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</body>
+</html>

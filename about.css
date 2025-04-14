@@ -1,0 +1,72 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .about-container {
+    padding: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .intro {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .bold {
+    font-weight: 600;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    background: #000;
+    color: #f4b400;
+    padding: 20px;
+    width: 180px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .stat-box h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  .skills-section, .interest-section {
+    margin-top: 50px;
+  }
+  
+  .skills, .interests {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .skill, .interest {
+    background-color: #f4b400;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1em;
+  }
+  
