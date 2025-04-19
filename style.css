@@ -93,6 +93,11 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 
+#typing-text {
+    font-size: 0.3srem; /* Sesuaikan ukuran sesuai dengan keinginan */
+  }
+  
+
 .description {
   font-size: 2em;
   color: #666;

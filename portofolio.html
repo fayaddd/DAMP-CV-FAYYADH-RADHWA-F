@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Gallery with Filter</title>
+  <link rel="stylesheet" href="style1.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Navbar kiri -->
+    <div class="sidebar">
+      <img src="UNLK0690.jpg" alt="Profile Picture" />
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html" class="active">ABOUT ME</a></li>
+        <li><a href="#">RESUME</a></li>
+        <li><a href="portofolio.html" class="active">PORTOFOLIO</a></li>
+        <li><a href="#">CONTACT</a></li>
+      
+      <div class="social-icons">
+        <a href="https://www.instagram.com/radhwa___/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="https://wa.me/6281267704484" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+        <a href="https://linkedin.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+      </div>
+    </ul>
+    </div>
+
+    <!-- Konten utama -->
+    <div class="main-content">
+      <button id="toggle-dark" class="dark-toggle">🌙 Dark Mode</button>
+      <h1>My Project Gallery</h1>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="design">Design</button>
+        <button class="filter-btn" data-category="web">Web</button>
+        <button class="filter-btn" data-category="photo">Photography</button>
+      </div>
+
+      <div class="gallery">
+        <div class="item design"><img src="design.png" alt="Design 1" /></div>
+        <div class="item web"><img src="IWI.png" alt="Web 1" /></div>
+        <div class="item photo"><img src="bromo.jpg" alt="Photo 1" /></div>
+        <div class="item design"><img src="ig.png" alt="Design 2" /></div>
+        <div class="item web"><img src="web.png" alt="Web 2" /></div>
+        <div class="item photo"><img src="IWI.png" alt="Photo 2" /></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
